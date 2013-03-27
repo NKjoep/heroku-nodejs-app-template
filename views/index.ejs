@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>app.js</title>
+		<link href="app.css" rel="stylesheet">
+
+	</head>
+
+	<body>
+		<h1>App.js</h1>
+		
+		<hr />
+		
+		<table border="1">
+			<caption>Session Parameters</caption>
+			<tr>
+					<th>Key</th>
+					<th>Value</th>
+			</tr>
+			<% _.each(session, function(value, key) { %>
+					<tr>
+						<td><%= key %></td>
+						<td><%= value %></td>
+					</tr>
+			<% }); %>
+		</table>
+		
+		<hr />
+		
+		<table border="1">
+			<caption>queryString Parameters</caption>
+			<tr>
+					<th>Key</th>
+					<th>Value</th>
+			</tr>
+			<% _.each(queryString, function(value, key) { %>
+					<tr>
+						<td><%= key %></td>
+						<td><%= value %></td>
+					</tr>
+			<% }); %>
+		</table>
+
+	</body>
+</html>
